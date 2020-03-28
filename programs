@@ -1,0 +1,52 @@
+#!/bin/bash
+
+#A script to install my favorite programs and uninstall programs that I do not want.
+
+sudo ufw enable
+
+sudo apt update -y
+
+sudo apt remove mono-runtime-common gnome-orca -y
+
+sudo apt purge thunderbird -y
+
+sudo apt purge hexchat -y
+
+sudo apt purge transmission-gtk -y
+
+sudo apt update -y
+
+sudo apt purge unattended-upgrades -y
+
+sudo apt install ttf-mscorefonts-installer -y
+
+sudo apt install htop -y
+
+sudo apt install simplescreenrecorder
+
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+sudo apt-get install spotify-client -yy
+
+sudo apt install apt-transport-https curl -yy
+
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo apt install brave-browser -yy
+
+sudo apt install mint-meta-codecs -yy
+
+sudo apt install vlc -yy
+
+sudo apt dist-upgrade
+
+sudo apt autoremove
+
+sudo apt autoclean
+
+
