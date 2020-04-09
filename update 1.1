@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo "****************"
+echo "*  UPDATE 1.1  *"
+echo "****************"
+
+sudo echo "***************************"
+echo "*  UPDATING PACKAGE INFO  *"
+echo "***************************"
+
+sudo apt update -yy
+
+echo "***********************************"
+echo "*  PERFORMING FULL SYSTEM UPDATE  *"
+echo "***********************************"
+
+sudo apt full-upgrade -yy
+
+echo "************************************"
+echo "*  REMOVING UNEEDED PACKAGE FILES  *"
+echo "************************************"
+
+sudo apt autoremove -yy
+
+echo "***************************"
+echo "*  CLEANING UP OLD FILES  *"
+echo "***************************"
+
+sudo apt autoclean -yy
+
+echo "****************************"
+echo "*  SYSTEM UPDATE COMPLETE!  *"
+echo "****************************"
