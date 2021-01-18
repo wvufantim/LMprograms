@@ -26,6 +26,8 @@ sudo apt install htop -y
 
 sudo apt install simplescreenrecorder -y
 
+sudo apt install numlockx -y
+
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get install spotify-client -yy
