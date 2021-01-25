@@ -36,6 +36,10 @@ sudo apt install numlockx -y
 
 sudo apt install mc -y
 
+sudo apt install easytag -y
+
+sudo apt install stacer -y
+
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get install spotify-client -yy
@@ -52,6 +56,13 @@ sudo apt install mint-meta-codecs -yy
 sudo apt install vlc -yy
 
 sudo apt update
+
+flatpak install flathub com.simplenote.Simplenote -y
+
+flatpak install flathub freefilesync.FreeFileSync -y
+
+flatpak install flathub org.jitsi.jitsi-meet -y
+
 
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
