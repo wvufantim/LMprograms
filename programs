@@ -59,7 +59,7 @@ sudo apt update
 
 flatpak install flathub com.simplenote.Simplenote -y
 
-flatpak install flathub freefilesync.FreeFileSync -y
+flatpak install flathub org.freefilesync.FreeFileSync -y
 
 flatpak install flathub org.jitsi.jitsi-meet -y
 
