@@ -30,4 +30,3 @@ sudo echo "obtaining sudo"
         echo "Error!, unknown system audio configuration" 1>&2
         exit 1
     fi
-}
