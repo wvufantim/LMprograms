@@ -46,16 +46,22 @@ sudo apt install vlc -yy
 
 sudo apt install mint-meta-codecs -yy
 
+#Install Spotify
+
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get install spotify-client -yy
+
+#Install Brave Browser
 
 sudo apt install apt-transport-https curl -yy
 
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
 sudo apt update
+
 sudo apt install brave-browser -yy
 
 #Install Flatpak
@@ -66,13 +72,18 @@ flatpak install flathub org.freefilesync.FreeFileSync -y
 
 flatpak install flathub org.jitsi.jitsi-meet -y
 
+#Get Updated Key for Spotify
 
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+
+#Upgrade, Remove, and Clean
 
 sudo apt dist-upgrade -y
 
 sudo apt autoremove -y
 
 sudo apt autoclean -y
+
+#Fix popping sound on speakers due to sound card going to sleep in Linux Mint. Have Popsound file in bin before running. 
 
 popsound
