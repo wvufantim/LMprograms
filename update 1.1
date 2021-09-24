@@ -27,6 +27,7 @@ echo "*  REMOVING UNEEDED PACKAGE FILES  *"
 echo "************************************"
 
 sudo apt autoremove -yy
+sudo apt remove --purge $(dpkg -l | grep "^rc" | awk '{print $2}') -yy
 
 echo "***************************"
 echo "*  CLEANING UP OLD FILES  *"
