@@ -12,13 +12,9 @@ sudo apt update
 
 sudo apt remove mono-runtime-common gnome-orca -y
 
-sudo apt purge thunderbird -y
-
 sudo apt purge hexchat -y
 
 sudo apt purge transmission-gtk -y
-
-sudo apt purge unattended-upgrades -y
 
 #Install Programs
 
