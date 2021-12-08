@@ -3,6 +3,9 @@
 #A script to install my favorite programs and uninstall programs that I do not want.
 
 #Enable Firewall
+
+echo "**ENABLING FIREWALL**"
+
 sudo ufw enable
 
 #Update
@@ -10,39 +13,45 @@ sudo apt update
 
 #Purge Programs
 
+echo "**PURGING UNWANTED PROGRAMS**"
+
 sudo apt remove mono-runtime-common gnome-orca -y
 
 sudo apt purge hexchat -y
 
 sudo apt purge transmission-gtk -y
 
+sudo apt purge firefox -y
+
 #Install Programs
 
-sudo apt install ttf-mscorefonts-installer -y
+echo "**INSTALLING FAVORITE PROGRAMS**"
 
-sudo apt install opensc -y
+sudo apt install ttf-mscorefonts-installer -yy
 
-sudo apt install htop -y
+sudo apt install htop -yy
 
-sudo apt install simplescreenrecorder -y
+sudo apt install simplescreenrecorder -yy
 
-sudo apt install numlockx -y
+sudo apt install numlockx -yy
 
-sudo apt install mc -y
+sudo apt install mc -yy
 
-sudo apt install easytag -y
+sudo apt install easytag -yy
 
-sudo apt install stacer -y
+sudo apt install stacer -yy
 
-sudo apt install vlc -yy
+#sudo apt install vlc -yy
 
 sudo apt install mint-meta-codecs -yy
 
+sudo apt install gparted -yy
+
 #Install Spotify
 
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get install spotify-client -yy
+#curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+#sudo apt-get install spotify-client -yy
 
 #Install Brave Browser
 
@@ -58,7 +67,15 @@ sudo apt install brave-browser -yy
 
 #Install Flatpak
 
-flatpak install fr.handbrake.ghb
+flatpak install flathub org.gnome.Cheese
+
+flatpak install flathub org.mozilla.firefox -y
+
+flatpak install flathub com.spotify.Client -y
+
+flatpak install flathub org.videolan.VLC -y
+
+flatpak install flathub fr.handbrake.ghb -y
 
 flatpak install flathub org.kde.kdenlive -y
 
@@ -70,7 +87,7 @@ flatpak install flathub org.jitsi.jitsi-meet -y
 
 #Get Updated Key for Spotify
 
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+#curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
 #Upgrade, Remove, and Clean
 
