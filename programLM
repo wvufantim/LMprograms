@@ -4,7 +4,9 @@
 
 #Enable Firewall
 
-echo "**ENABLING FIREWALL**"
+echo "*****************************"
+echo "******ENABLING FIREWALL******"
+echo "*****************************"
 
 sudo ufw enable
 
@@ -15,7 +17,9 @@ sudo apt update
 
 #Purge Programs
 
+echo "*****************************"
 echo "**PURGING UNWANTED PROGRAMS**"
+echo "*****************************"
 
 sudo apt remove –purge libreoffice* -yy
 
@@ -29,7 +33,9 @@ sudo apt purge firefox -yy
 
 #Install Programs
 
-echo "**INSTALLING FAVORITE PROGRAMS**"
+echo "*****************************"
+echo "*****INSTALLING PROGRAMS*****"
+echo "*****************************"
 
 sudo apt install ttf-mscorefonts-installer -yy
 
@@ -102,6 +108,10 @@ flatpak install flathub org.jitsi.jitsi-meet -yy
 #curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
 #Upgrade, Remove, and Clean
+
+echo "******************************"
+echo "*******UPDATING SYSTEM********"
+echo "******************************"
 
 sudo apt dist-upgrade -yy
 
