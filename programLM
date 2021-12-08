@@ -21,7 +21,7 @@ echo "*****************************"
 echo "**PURGING UNWANTED PROGRAMS**"
 echo "*****************************"
 
-sudo apt remove –purge libreoffice* -yy
+sudo apt purge libreoffice* -yy
 
 sudo apt remove mono-runtime-common gnome-orca -yy
 
