@@ -8,6 +8,8 @@ echo "**ENABLING FIREWALL**"
 
 sudo ufw enable
 
+gufw
+
 #Update
 sudo apt update
 
@@ -15,13 +17,15 @@ sudo apt update
 
 echo "**PURGING UNWANTED PROGRAMS**"
 
-sudo apt remove mono-runtime-common gnome-orca -y
+sudo apt remove –purge libreoffice* -yy
 
-sudo apt purge hexchat -y
+sudo apt remove mono-runtime-common gnome-orca -yy
 
-sudo apt purge transmission-gtk -y
+sudo apt purge hexchat -yy
 
-sudo apt purge firefox -y
+sudo apt purge transmission-gtk -yy
+
+sudo apt purge firefox -yy
 
 #Install Programs
 
@@ -47,6 +51,12 @@ sudo apt install mint-meta-codecs -yy
 
 sudo apt install gparted -yy
 
+sudo apt install audacity -yy
+
+sudo apt install gtkhash -yy
+
+
+
 #Install Spotify
 
 #curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
@@ -67,23 +77,25 @@ sudo apt install brave-browser -yy
 
 #Install Flatpak
 
-flatpak install flathub org.gnome.Cheese
+flatpak install flathub org.onlyoffice.desktopeditors -yy
 
-flatpak install flathub org.mozilla.firefox -y
+flatpak install flathub org.gnome.Cheese -yy
 
-flatpak install flathub com.spotify.Client -y
+flatpak install flathub org.mozilla.firefox -yy
 
-flatpak install flathub org.videolan.VLC -y
+flatpak install flathub com.spotify.Client -yy
 
-flatpak install flathub fr.handbrake.ghb -y
+flatpak install flathub org.videolan.VLC -yy
 
-flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub fr.handbrake.ghb -yy
 
-flatpak install flathub com.simplenote.Simplenote -y
+flatpak install flathub org.kde.kdenlive -yy
 
-flatpak install flathub org.freefilesync.FreeFileSync -y
+flatpak install flathub com.simplenote.Simplenote -yy
 
-flatpak install flathub org.jitsi.jitsi-meet -y
+flatpak install flathub org.freefilesync.FreeFileSync -yy
+
+flatpak install flathub org.jitsi.jitsi-meet -yy
 
 #Get Updated Key for Spotify
 
@@ -91,11 +103,11 @@ flatpak install flathub org.jitsi.jitsi-meet -y
 
 #Upgrade, Remove, and Clean
 
-sudo apt dist-upgrade -y
+sudo apt dist-upgrade -yy
 
-sudo apt autoremove -y
+sudo apt autoremove -yy
 
-sudo apt autoclean -y
+sudo apt autoclean -yy
 
 #Fix popping sound on speakers due to sound card going to sleep in Linux Mint. Have Popsound file in bin before running. 
 
