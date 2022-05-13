@@ -14,11 +14,11 @@ wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/popsound_LM -
 
 #Make scripts executable
 
-sudo chmod +X /home/tim/bin/up
+sudo chmod +x /home/tim/bin/up
 
-sudo chmod +X /home/tim/bin/programs
+sudo chmod +x /home/tim/bin/programs
 
-sudo chmod +X /home/tim/bin/popsound_LM
+sudo chmod +x /home/tim/bin/popsound_LM
 
 #Search for "bin" directory to add it to bin path
 
