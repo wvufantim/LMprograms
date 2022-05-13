@@ -123,4 +123,4 @@ sudo apt autoclean -yy
 
 #Fix popping sound on speakers due to sound card going to sleep in Linux Mint. Have Popsound file in bin before running. 
 
-popsound
+popsound_LM
