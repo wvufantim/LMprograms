@@ -1,0 +1,25 @@
+#!/bin/bash
+
+mkdir /home/tim/bin
+
+#Get Bash Scripts
+
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/up -P /home/tim/bin
+
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/programs -P /home/tim/bin
+
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/popsound_LM -P /home/tim/bin
+
+#Make scripts executable
+
+sudo chmod +X /home/tim/bin/up
+
+sudo chmod +X /home/tim/bin/programs
+
+sudo chmod +X /home/tim/bin/popsound_LM
+
+#This is to search for bin
+
+test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+
+echo "Your intial setup should be done!"
