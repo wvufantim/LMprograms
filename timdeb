@@ -12,9 +12,9 @@ echo "**********DOWNLOADING BASH SCRIPTS**********"
 
 wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/up -P /home/$USER/bin
 
-wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/programs -P /$USER/tim/bin
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/programs -P /home/$USER/bin
 
-wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/popsound_LM -P /$USER/tim/bin
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/popsound_LM -P /home/$USER/bin
 
 #Make scripts executable
 
@@ -22,7 +22,7 @@ echo "**********MAKING BASH SCRIPTS EXECUTABLE**********"
 
 sudo chmod +x /home/$USER/bin/up
 
-sudo chmod +x /home/tim/$USER/programs
+sudo chmod +x /home/$USER/bin/programs
 
 sudo chmod +x /home/$USER/bin/popsound_LM
 
