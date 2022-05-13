@@ -10,8 +10,6 @@ echo "*****************************"
 
 sudo ufw enable
 
-gufw
-
 #Update
 sudo apt update
 
@@ -37,7 +35,8 @@ echo "*****************************"
 echo "*****INSTALLING PROGRAMS*****"
 echo "*****************************"
 
-sudo apt install ttf-mscorefonts-installer -yy
+# No need to install MS fonts. Comes with OnlyOffice.
+# sudo apt install ttf-mscorefonts-installer -yy
 
 sudo apt install htop -yy
 
