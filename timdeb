@@ -1,8 +1,10 @@
 #!/bin/bash
 
+#Make the bin directory
+
 mkdir /home/tim/bin
 
-#Get Bash Scripts
+#Download Bash Scripts
 
 wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/up -P /home/tim/bin
 
@@ -18,8 +20,14 @@ sudo chmod +X /home/tim/bin/programs
 
 sudo chmod +X /home/tim/bin/popsound_LM
 
-#This is to search for bin
+#Search for "bin" directory to add it to bin path
 
 test -d "$HOME/bin" && PATH="$HOME/bin:$PATH"
+
+#Run the intial update and program setup
+
+up
+
+programs
 
 echo "Your intial setup should be done!"
