@@ -25,6 +25,14 @@ sudo apt purge transmission-gtk -yy
 
 sudo apt purge firefox -yy
 
+sudo apt purge vlc -yy
+
+sudo apt purge sticky -yy
+
+sudo apt purge seahorse -yy
+
+sudo apt purge thunderbird -yy
+
 #Install Programs
 
 echo "*************INSTALLING PROGRAMS*************"
@@ -40,27 +48,19 @@ sudo apt install numlockx -yy
 
 sudo apt install mc -yy
 
-sudo apt install easytag -yy
-
 sudo apt install stacer -yy
-
-sudo apt install vlc -yy
 
 sudo apt install mint-meta-codecs -yy
 
 sudo apt install gparted -yy
 
-sudo apt install audacity -yy
-
 sudo apt install gtkhash -yy
 
+sudo apt install brasero -yy
 
+sudo apt install grub-customizer
 
-#Install Spotify
-
-#curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
-#echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-#sudo apt-get install spotify-client -yy
+sudo apt install bulky
 
 #Install Brave Browser
 
@@ -96,9 +96,23 @@ flatpak install flathub org.jitsi.jitsi-meet -yy
 
 flatpak install flathub org.signal.Signal -yy
 
-#Get Updated Key for Spotify
+flatpak install flathub org.audacityteam.Audacity -yy
 
-#curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+flatpak install flathub org.videolan.VLC -yy
+
+flatpak install flathub org.gnome.EasyTAG -yy
+
+flatpak install flathub com.spotify.Client -yy
+
+flatpak install flathub org.gtkhash.gtkhash -yy
+
+flatpak install flathub org.mozilla.Thunderbird -yy
+
+flatpak install flathub io.gitlab.librewolf-community -yy
+
+flatpak install flathub org.js.nuclear.Nuclear -yy
+
+flatpak install flathub org.gnome.Boxes -yy
 
 #Remove, and Clean
 
