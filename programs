@@ -114,6 +114,8 @@ flatpak install flathub org.js.nuclear.Nuclear -yy
 
 flatpak install flathub org.gnome.Boxes -yy
 
+flatpak install flathub org.flameshot.Flameshot
+
 #Remove, and Clean
 
 echo "*************CLEANING*************"
