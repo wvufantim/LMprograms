@@ -112,7 +112,13 @@ flatpak install flathub org.js.nuclear.Nuclear -yy
 
 flatpak install flathub org.gnome.Boxes -yy
 
-flatpak install flathub org.flameshot.Flameshot
+flatpak install flathub org.flameshot.Flameshot -yy
+
+flatpak install flathub com.obsproject.Studio -yy
+
+flatpak install flathub org.gnome.Shotwell -yy
+
+
 
 #Remove, and Clean
 
