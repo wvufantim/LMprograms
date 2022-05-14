@@ -54,8 +54,6 @@ sudo apt install mint-meta-codecs -yy
 
 sudo apt install gparted -yy
 
-sudo apt install gtkhash -yy
-
 sudo apt install brasero -yy
 
 sudo apt install grub-customizer -yy
