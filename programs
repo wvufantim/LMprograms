@@ -58,9 +58,9 @@ sudo apt install gtkhash -yy
 
 sudo apt install brasero -yy
 
-sudo apt install grub-customizer
+sudo apt install grub-customizer -yy
 
-sudo apt install bulky
+sudo apt install bulky -yy
 
 #Install Brave Browser
 
