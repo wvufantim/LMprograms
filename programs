@@ -9,8 +9,7 @@ sudo echo " _____ _   _    _    ____  _     ___ _   _  ____     _____ ___ ____  
 |  _| |  \| | / _ \ |  _ \| |    | ||  \| | |  _    | |_   | || |_) |  _|  \ \ /\ / / _ \ | |   | |
 | |___| |\  |/ ___ \| |_) | |___ | || |\  | |_| |   |  _|  | ||  _ <| |___  \ V  V / ___ \| |___| |___
 |_____|_| \_/_/   \_|____/|_____|___|_| \_|\________|_|   |___|_| \_|_____|  \_/\_/_/   \_|_____|_____|
-                                               |_____|
-"
+                                               |_____|"
 
 sudo ufw enable
 
@@ -26,15 +25,15 @@ echo " ____  _   _ ____   ____ ___ _   _  ____     ____  ____   ___   ____ ____ 
 |_|    \___/|_| \_\\____|___|_| \_|\________|_|   |_| \_\\___/ \____|_| \_/_/   \_|_|  |_|____/
                                        |_____|"
 
-#sudo apt purge libreoffice* -yy
+sudo apt purge libreoffice* -yy
 
-#sudo apt remove mono-runtime-common gnome-orca -yy
+sudo apt remove mono-runtime-common gnome-orca -yy
 
-#sudo apt purge hexchat -yy
+sudo apt purge hexchat -yy
 
-#sudo apt purge transmission-gtk -yy
+sudo apt purge transmission-gtk -yy
 
-#sudo apt purge firefox -yy
+sudo apt purge firefox -yy
 
 #Install Programs
 
@@ -48,27 +47,27 @@ echo " ___ _   _ ____ _____  _    _     _     ___ _   _  ____     ____  ____   _
 # No need to install MS fonts. Comes with OnlyOffice.
 # sudo apt install ttf-mscorefonts-installer -yy
 
-#sudo apt install htop -yy
+sudo apt install htop -yy
 
-#sudo apt install simplescreenrecorder -yy
+sudo apt install simplescreenrecorder -yy
 
-#sudo apt install numlockx -yy
+sudo apt install numlockx -yy
 
-#sudo apt install mc -yy
+sudo apt install mc -yy
 
-#sudo apt install easytag -yy
+sudo apt install easytag -yy
 
-#sudo apt install stacer -yy
+sudo apt install stacer -yy
 
-##sudo apt install vlc -yy
+sudo apt install vlc -yy
 
-#sudo apt install mint-meta-codecs -yy
+sudo apt install mint-meta-codecs -yy
 
-#sudo apt install gparted -yy
+sudo apt install gparted -yy
 
-#sudo apt install audacity -yy
+sudo apt install audacity -yy
 
-#sudo apt install gtkhash -yy
+sudo apt install gtkhash -yy
 
 
 
@@ -92,31 +91,31 @@ sudo apt install brave-browser -yy
 
 #Install Flatpak
 
-#flatpak install flathub org.onlyoffice.desktopeditors -yy
+flatpak install flathub org.onlyoffice.desktopeditors -yy
 
-#flatpak install flathub org.gnome.Cheese -yy
+flatpak install flathub org.gnome.Cheese -yy
 
 flatpak install flathub org.mozilla.firefox -yy
 
-#flatpak install flathub org.videolan.VLC -yy
+flatpak install flathub org.videolan.VLC -yy
 
-#flatpak install flathub fr.handbrake.ghb -yy
+flatpak install flathub fr.handbrake.ghb -yy
 
-#flatpak install flathub org.kde.kdenlive -yy
+flatpak install flathub org.kde.kdenlive -yy
 
-#flatpak install flathub com.simplenote.Simplenote -yy
+flatpak install flathub com.simplenote.Simplenote -yy
 
-#flatpak install flathub org.freefilesync.FreeFileSync -yy
+flatpak install flathub org.freefilesync.FreeFileSync -yy
 
-#flatpak install flathub org.jitsi.jitsi-meet -yy
+flatpak install flathub org.jitsi.jitsi-meet -yy
 
-#flatpak install flathub org.signal.Signal -yy
+flatpak install flathub org.signal.Signal -yy
 
 #Get Updated Key for Spotify
 
 #curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
 
-#Upgrade, Remove, and Clean
+#Remove, and Clean
 
 echo "  ____ _     _____    _    _   _ ___ _   _  ____
  / ___| |   | ____|  / \  | \ | |_ _| \ | |/ ___|
