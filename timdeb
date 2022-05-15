@@ -16,6 +16,8 @@ wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/programs -P /
 
 wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/popsound_LM -P /home/$USER/bin
 
+wget https://raw.githubusercontent.com/wvufantim/LMprograms/master/bu -P /home/$USER/bin
+
 #Make scripts executable
 
 echo "*****************MAKING SCRIPTS EXECUTABLE*****************"
@@ -25,6 +27,8 @@ sudo chmod +x /home/$USER/bin/up
 sudo chmod +x /home/$USER/bin/programs
 
 sudo chmod +x /home/$USER/bin/popsound_LM
+
+sudo chmod +x /home/$USER/bin/bu
 
 #Search for "bin" directory to add it to bin path
 
@@ -39,5 +43,7 @@ echo "*****************RUNNING SCRIPTS*****************"
 up
 
 programs
+
+bu --restore
 
 echo "*****************INITIAL SETUP COMPLETE*****************"
