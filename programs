@@ -120,6 +120,8 @@ flatpak install flathub com.obsproject.Studio -yy
 
 flatpak install flathub org.gnome.Shotwell -yy
 
+flatpak install flathub life.bolls.bolls -yy
+
 
 
 #Remove, and Clean
