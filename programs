@@ -56,8 +56,6 @@ sudo apt install gparted -yy
 
 sudo apt install brasero -yy
 
-sudo apt install grub-customizer -yy
-
 sudo apt install bulky -yy
 
 sudo apt install parcellite -yy
