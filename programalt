@@ -1,0 +1,57 @@
+#!/bin/bash
+
+#A script to install my favorite programs and uninstall programs that I do not want.
+
+#Enable Firewall
+
+sudo echo "*************ENABLING FIREWALL*************"
+
+sudo ufw enable
+
+#Update
+sudo apt update
+
+#Purge Programs
+
+echo "*************PURGING PROGRAMS*************"
+
+sudo apt purge libreoffice* mono-runtime-common gnome-orca hexchat transmission-gtk firefox vlc sticky seahorse thunderbird -yy
+
+#Install Programs
+
+echo "*************INSTALLING PROGRAMS*************"
+
+# No need to install MS fonts. Comes with OnlyOffice.
+# sudo apt install ttf-mscorefonts-installer -yy
+
+sudo apt install htop simplescreenrecorder numlockx mc stacer mint-meta-codecs gparted brasero bulky parcellite -yy
+
+#Install Brave Browser
+
+sudo apt install apt-transport-https curl -yy
+
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo apt install brave-browser -yy
+
+#Install Flatpak
+
+flatpak install flathub org.onlyoffice.desktopeditors org.gnome.Cheese org.mozilla.firefox org.videolan.VLC fr.handbrake.ghb org.kde.kdenlive com.simplenote.Simplenote org.freefilesync.FreeFileSync org.jitsi.jitsi-meet org.signal.Signal org.audacityteam.Audacity org.videolan.VLC org.gnome.EasyTAG com.spotify.Client org.gtkhash.gtkhash org.mozilla.Thunderbird io.gitlab.librewolf-community org.js.nuclear.Nuclear org.gnome.Boxes org.flameshot.Flameshot com.obsproject.Studio org.gnome.Shotwell life.bolls.bolls -yy
+
+
+
+#Remove, and Clean
+
+echo "*************CLEANING*************"
+
+sudo apt autoremove -yy
+
+sudo apt autoclean -yy
+
+#Fix popping sound on speakers due to sound card going to sleep in Linux Mint. Have Popsound file in bin before running. 
+
+popsound_LM
