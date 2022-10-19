@@ -56,7 +56,7 @@ sudo apt install gparted -yy
 
 sudo apt install brasero -yy
 
-sudo apt install bulky -yy
+#sudo apt install bulky -yy
 
 sudo apt install parcellite -yy
 
@@ -94,7 +94,7 @@ flatpak install flathub org.jitsi.jitsi-meet -yy
 
 flatpak install flathub org.signal.Signal -yy
 
-flatpak install flathub org.audacityteam.Audacity -yy
+#flatpak install flathub org.audacityteam.Audacity -yy
 
 flatpak install flathub org.videolan.VLC -yy
 
@@ -108,13 +108,13 @@ flatpak install flathub org.mozilla.Thunderbird -yy
 
 flatpak install flathub io.gitlab.librewolf-community -yy
 
-flatpak install flathub org.js.nuclear.Nuclear -yy
+#flatpak install flathub org.js.nuclear.Nuclear -yy
 
 flatpak install flathub org.gnome.Boxes -yy
 
 flatpak install flathub org.flameshot.Flameshot -yy
 
-flatpak install flathub com.obsproject.Studio -yy
+#flatpak install flathub com.obsproject.Studio -yy
 
 flatpak install flathub org.gnome.Shotwell -yy
 
