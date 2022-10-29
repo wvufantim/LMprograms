@@ -23,8 +23,6 @@ sudo apt purge hexchat -yy
 
 sudo apt purge transmission-gtk -yy
 
-sudo apt purge firefox -yy
-
 sudo apt purge vlc -yy
 
 sudo apt purge sticky -yy
@@ -77,8 +75,6 @@ sudo apt install brave-browser -yy
 flatpak install flathub org.onlyoffice.desktopeditors -yy
 
 flatpak install flathub org.gnome.Cheese -yy
-
-flatpak install flathub org.mozilla.firefox -yy
 
 flatpak install flathub org.videolan.VLC -yy
 
