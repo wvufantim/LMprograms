@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Backup function
+backup() {
+    # Set the backup location
+    backup_dir="/mnt/backups"
+
+    # Create the backup directory if it doesn't exist
+    if [ ! -d "$backup_dir" ]; then
+        mkdir -p "$backup_dir"
+    fi
+
+    # Get the current date and time
+    current_date=$(date +%Y-%m-%d_%H-%M-%S)
+
+    # Create the backup archive file
+    tar -zcvf "$backup_dir/backup_$current_date.tar.gz" /home /etc
+}
+
+# Restore function
+restore() {
+    # Set the backup location
+    backup_dir="/mnt/backups"
+
+    # Ask user for backup file name
+    read -p "Enter the name of the backup file to restore (example: backup_2022-12-31_23-59-59.tar.gz): " backup_file
+
+    # Check if the backup file exists
+    if [ -f "$backup_dir/$backup_file" ]; then
+        # Extract the backup file
+        tar -zxvf "$backup_dir/$backup_file" -C /
+    else
+        echo "Error: Backup file not found."
+    fi
+}
+
+# Main menu
+while true; do
+    echo "1. Backup"
+    echo "2. Restore"
+    echo "3. Exit"
+    read -p "Enter your choice: " choice
+    case $choice in
+        1)
+            backup
+            ;;
+        2)
+            restore
+            ;;
+        3)
+            exit
+            ;;
+        *)
+            echo "Invalid choice. Please enter a valid option."
+            ;;
+    esac
+done
