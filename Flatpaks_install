@@ -1,1 +1,43 @@
+flatpak install flathub org.onlyoffice.desktopeditors -yy
 
+flatpak install flathub org.gnome.Cheese -yy
+
+flatpak install flathub org.videolan.VLC -yy
+
+flatpak install flathub fr.handbrake.ghb -yy
+
+org.kde.kdenlive
+
+com.simplenote.Simplenote
+
+org.freefilesync.FreeFileSync
+
+org.jitsi.jitsi-meet
+
+org.signal.Signal
+
+org.audacityteam.Audacity
+
+org.videolan.VLC
+
+org.gnome.EasyTAG
+
+com.spotify.Client
+
+org.gtkhash.gtkhash
+
+org.mozilla.Thunderbird
+
+io.gitlab.librewolf-community
+
+org.js.nuclear.Nuclear
+
+org.gnome.Boxes
+
+org.flameshot.Flameshot
+
+com.obsproject.Studio
+
+org.gnome.Shotwell
+
+life.bolls.bolls
