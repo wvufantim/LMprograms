@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Unlink Snap store from Discovery Center
+echo "Unlinking Snap store from Discovery Center..."
+qdbus org.kde.discover /org/kde/discover org.kde.discover.UnsetBackend com.snapstore.SnapBackend
+
+# Link Flathub to Discovery Center
+echo "Linking Flathub to Discovery Center..."
+qdbus org.kde.discover /org/kde/discover org.kde.discover.SetBackend com.github.flatpak.FlatpakBackend
+
+# Restart Discover to apply changes
+echo "Restarting Discover to apply changes..."
+qdbus org.kde.discover /org/kde/discover org.kde.discover.Restart
+
+echo "Done."
