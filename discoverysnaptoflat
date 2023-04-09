@@ -1,43 +1,20 @@
 #!/bin/bash
 
-# Unlink Snap store from Discovery Center
-echo "Unlinking Snap store from Discovery Center..."
-snap_service=$(qdbus | grep -E '.*org\.kde\.discover.*')
-if [[ -n "$snap_service" ]]; then
-    snap_backend=$(qdbus "$snap_service" /org/kde/discover org.kde.discover.Backend | grep com.snapstore.SnapBackend)
-    if [[ -n "$snap_backend" ]]; then
-        qdbus "$snap_service" /org/kde/discover org.kde.discover.UnsetBackend "$snap_backend"
-        echo "Snap store unlinked from Discovery Center."
-    else
-        echo "Snap store not found in Discovery Center."
-    fi
-else
-    echo "Discovery Center service not found."
-fi
+# Unlink Snap store from plasma-discover
+echo "Unlinking Snap store from plasma-discover..."
+qdbus org.kde.discover /org/kde/discover org.kde.discover.UnsetSnapBackend
+echo "Snap store unlinked from plasma-discover."
 
-# Link Flathub to Discovery Center
-echo "Linking Flathub to Discovery Center..."
-flatpak_service=$(qdbus | grep -E '.*org\.kde\.discover.*')
-if [[ -n "$flatpak_service" ]]; then
-    flatpak_backend=$(qdbus "$flatpak_service" /org/kde/discover org.kde.discover.Backend | grep com.github.flatpak.FlatpakBackend)
-    if [[ -n "$flatpak_backend" ]]; then
-        qdbus "$flatpak_service" /org/kde/discover org.kde.discover.SetBackend "$flatpak_backend"
-        echo "Flathub linked to Discovery Center."
-    else
-        echo "Flathub not found in Discovery Center."
-    fi
-else
-    echo "Discovery Center service not found."
-fi
+# Link Flathub to plasma-discover
+echo "Linking Flathub to plasma-discover..."
+qdbus org.kde.discover /org/kde/discover org.kde.discover.SetFlatpakBackend
+echo "Flathub linked to plasma-discover."
 
 # Restart Discover to apply changes
 echo "Restarting Discover to apply changes..."
-discover_service=$(qdbus | grep -E '.*org\.kde\.discover.*')
-if [[ -n "$discover_service" ]]; then
-    qdbus "$discover_service" /org/kde/discover org.kde.discover.Restart
-    echo "Discover restarted."
-else
-    echo "Discovery Center service not found."
-fi
+kquitapp5 discover
+sleep 2
+kstart5 discover
+echo "Discover restarted."
 
 echo "Done."
