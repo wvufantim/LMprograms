@@ -2,11 +2,23 @@
 
 # Unlink Snap store from Discovery Center
 echo "Unlinking Snap store from Discovery Center..."
-qdbus org.kde.discover /org/kde/discover org.kde.discover.UnsetBackend com.snapstore.SnapBackend
+snap_backend=$(qdbus org.kde.discover /org/kde/discover org.kde.discover.Backend | grep com.snapstore.SnapBackend)
+if [[ -n "$snap_backend" ]]; then
+    qdbus org.kde.discover /org/kde/discover org.kde.discover.UnsetBackend "$snap_backend"
+    echo "Snap store unlinked from Discovery Center."
+else
+    echo "Snap store not found in Discovery Center."
+fi
 
 # Link Flathub to Discovery Center
 echo "Linking Flathub to Discovery Center..."
-qdbus org.kde.discover /org/kde/discover org.kde.discover.SetBackend com.github.flatpak.FlatpakBackend
+flatpak_backend=$(qdbus org.kde.discover /org/kde/discover org.kde.discover.Backend | grep com.github.flatpak.FlatpakBackend)
+if [[ -n "$flatpak_backend" ]]; then
+    qdbus org.kde.discover /org/kde/discover org.kde.discover.SetBackend "$flatpak_backend"
+    echo "Flathub linked to Discovery Center."
+else
+    echo "Flathub not found in Discovery Center."
+fi
 
 # Restart Discover to apply changes
 echo "Restarting Discover to apply changes..."
