@@ -1,20 +1,13 @@
 #!/bin/bash
 
-# Unlink Snap store from plasma-discover
-echo "Unlinking Snap store from plasma-discover..."
-qdbus org.kde.discover /org/kde/discover org.kde.discover.UnsetSnapBackend
-echo "Snap store unlinked from plasma-discover."
+# Unlink Snap store from Discover
+echo "Unlinking Snap store from Discover..."
+sudo sed -i 's/Backend\s*=\s*snap/Backend=flatpak/g' /etc/xdg/kcms/discoverrc
+echo "Snap store unlinked from Discover."
 
-# Link Flathub to plasma-discover
-echo "Linking Flathub to plasma-discover..."
-qdbus org.kde.discover /org/kde/discover org.kde.discover.SetFlatpakBackend
-echo "Flathub linked to plasma-discover."
-
-# Restart Discover to apply changes
-echo "Restarting Discover to apply changes..."
-kquitapp5 discover
-sleep 2
-kstart5 discover
-echo "Discover restarted."
+# Link Flathub to Discover
+echo "Linking Flathub to Discover..."
+sudo sed -i 's/Backend\s*=\s*flatpak/Backend=snap/g' /etc/xdg/kcms/discoverrc
+echo "Flathub linked to Discover."
 
 echo "Done."
