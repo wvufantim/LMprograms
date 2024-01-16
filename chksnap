@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Check if snapd is installed
+if ! command -v snap &> /dev/null; then
+  # Install snapd if it's not present
+  sudo apt update
+  sudo apt install snapd
+
+  # Ensure snapd is running
+  sudo systemctl enable --now snapd
+
+  # Ensure the snapd apparmor profile is loaded
+  sudo apparmor_parser -r -T -W /var/lib/snapd/apparmor/profiles/snapd.apparmor
+else
+  echo "Snapd is already installed."
+fi
+
+# Check if the Snap Store is installed
+if ! snap list snap-store &> /dev/null; then
+  # Install the Snap Store if it's not present
+  sudo snap install snap-store
+else
+  echo "Snap Store is already installed."
+fi
